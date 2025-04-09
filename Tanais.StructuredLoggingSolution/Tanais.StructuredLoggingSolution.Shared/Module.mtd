@@ -1,0 +1,62 @@
+{
+  "$type": "Sungero.Metadata.SolutionMetadata, Sungero.Metadata",
+  "NameGuid": "0eb3d53a-e810-4bb3-9556-cc690eb9b5eb",
+  "Name": "StructuredLoggingSolution",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "Tanais.StructuredLoggingSolution.Client",
+  "ClientBaseAssemblyName": "Tanais.StructuredLoggingSolution.ClientBase",
+  "ClientBaseNamespace": "Tanais.StructuredLoggingSolution.ClientBase",
+  "ClientNamespace": "Tanais.StructuredLoggingSolution.Client",
+  "Code": "Structu",
+  "CompanyCode": "Tanais",
+  "Cover": {
+    "NameGuid": "75a1a4a9-2709-4963-b908-d7a46c1ebccf",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "5ff9cf8f-ea7f-46f9-8e27-a61c40eeb1c7",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "862c04e1-728e-4be9-94e8-153173cabef3",
+      "BackgroundPosition": "Stretch"
+    },
+    "RemoteControls": [],
+    "Tabs": []
+  },
+  "DesktopViews": [],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "Tanais.StructuredLoggingSolution",
+  "IsolatedAssemblyName": "Tanais.StructuredLoggingSolution.Isolated",
+  "IsolatedNamespace": "Tanais.StructuredLoggingSolution.Isolated",
+  "IsVisible": false,
+  "OrderedSpecialFolders": [],
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "Tanais.StructuredLoggingSolution",
+  "ResourcesKeys": [],
+  "ServerAssemblyName": "Tanais.StructuredLoggingSolution.Server",
+  "ServerNamespace": "Tanais.StructuredLoggingSolution.Server",
+  "SharedAssemblyName": "Tanais.StructuredLoggingSolution.Shared",
+  "SharedNamespace": "Tanais.StructuredLoggingSolution.Shared",
+  "SpecialFolders": [],
+  "Version": "0.0.1.0",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "SolutionMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "ModuleMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

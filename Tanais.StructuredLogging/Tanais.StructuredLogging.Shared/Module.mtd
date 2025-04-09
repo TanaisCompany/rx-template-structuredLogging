@@ -1,0 +1,324 @@
+{
+  "$type": "Sungero.Metadata.ModuleMetadata, Sungero.Metadata",
+  "NameGuid": "f97e55cf-9186-4ad5-b3a7-0780b694e69d",
+  "Name": "StructuredLogging",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "Tanais.StructuredLogging.Client",
+  "ClientBaseAssemblyName": "Tanais.StructuredLogging.ClientBase",
+  "ClientBaseNamespace": "Tanais.StructuredLogging.ClientBase",
+  "ClientNamespace": "Tanais.StructuredLogging.Client",
+  "Code": "Struct1",
+  "CompanyCode": "Tanais",
+  "Cover": {
+    "NameGuid": "f42e15c9-fa17-4ecf-a449-fb61694c3e5b",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "40663f00-1716-46b7-b9f5-b7322c4251fb",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "ba78301c-7068-4dd3-8ace-c34bb048c273",
+      "BackgroundPosition": "Stretch"
+    },
+    "RemoteControls": [],
+    "Tabs": []
+  },
+  "Dependencies": [
+    {
+      "Id": "0eb3d53a-e810-4bb3-9556-cc690eb9b5eb",
+      "IsSolutionModule": true,
+      "MaxVersion": "",
+      "MinVersion": ""
+    }
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "Tanais.StructuredLogging",
+  "IsolatedAssemblyName": "Tanais.StructuredLogging.Isolated",
+  "IsolatedNamespace": "Tanais.StructuredLogging.Isolated",
+  "IsVisible": false,
+  "PublicConstants": [
+    {
+      "Name": "MessageText",
+      "ParentClasses": [
+        "Module",
+        "Logging",
+        "DefaultValuesConstLog"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"Empty\""
+    },
+    {
+      "Name": "StackTrace",
+      "ParentClasses": [
+        "Module",
+        "Logging",
+        "DefaultValuesConstLog"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"Empty\""
+    },
+    {
+      "Name": "Type",
+      "ParentClasses": [
+        "Module",
+        "Logging",
+        "DefaultValuesConstLog"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"Id\""
+    },
+    {
+      "Name": "Value",
+      "ParentClasses": [
+        "Module",
+        "Logging",
+        "DefaultValuesConstLog"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"Not defined\""
+    }
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "SyncEntityDebugLogger",
+      "Parameters": [
+        {
+          "Name": "function",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "operation",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "identifierType",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "identifier",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "loggerPostfix",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "SyncEntityDebugLogger",
+      "Parameters": [
+        {
+          "Name": "function",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "messageGuid",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "source",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "resultDescription",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "resultDrxId",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "result",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "identifierType",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "identifier",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "loggerPostfix",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "SyncEntityErrorLogger",
+      "Parameters": [
+        {
+          "Name": "function",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "operation",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "message",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "stackTrace",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "identifierType",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "identifier",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "loggerPostfix",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "SyncEntityErrorLogger",
+      "Parameters": [
+        {
+          "Name": "function",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "messageGuid",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "source",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "resultDescription",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "resultDrxId",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "result",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "message",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "stackTrace",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "identifierType",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "identifier",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "loggerPostfix",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    }
+  ],
+  "PublicStructures": [
+    {
+      "Name": "SyncResult",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "MessageGuid",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "DrxId",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Result",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Description",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "Tanais.StructuredLogging.Structures.Module"
+    }
+  ],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "Tanais.StructuredLogging",
+  "ResourcesKeys": [],
+  "ServerAssemblyName": "Tanais.StructuredLogging.Server",
+  "ServerNamespace": "Tanais.StructuredLogging.Server",
+  "SharedAssemblyName": "Tanais.StructuredLogging.Shared",
+  "SharedNamespace": "Tanais.StructuredLogging.Shared",
+  "SpecialFolders": [],
+  "Version": "0.0.1.0",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "ModuleMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}
