@@ -84,7 +84,7 @@
   ],
   "PublicFunctions": [
     {
-      "Name": "SyncEntityDebugLogger",
+      "Name": "DebugLogger",
       "Parameters": [
         {
           "Name": "function",
@@ -116,7 +116,7 @@
       "ReturnTypeFullName": "System.Void"
     },
     {
-      "Name": "SyncEntityDebugLogger",
+      "Name": "DebugLogger",
       "Parameters": [
         {
           "Name": "function",
@@ -124,37 +124,7 @@
           "ParameterTypeFullName": "System.String"
         },
         {
-          "Name": "messageGuid",
-          "ParameterType": "global::System.String",
-          "ParameterTypeFullName": "System.String"
-        },
-        {
-          "Name": "source",
-          "ParameterType": "global::System.String",
-          "ParameterTypeFullName": "System.String"
-        },
-        {
-          "Name": "resultDescription",
-          "ParameterType": "global::System.String",
-          "ParameterTypeFullName": "System.String"
-        },
-        {
-          "Name": "resultDrxId",
-          "ParameterType": "global::System.String",
-          "ParameterTypeFullName": "System.String"
-        },
-        {
-          "Name": "result",
-          "ParameterType": "global::System.String",
-          "ParameterTypeFullName": "System.String"
-        },
-        {
-          "Name": "identifierType",
-          "ParameterType": "global::System.String",
-          "ParameterTypeFullName": "System.String"
-        },
-        {
-          "Name": "identifier",
+          "Name": "operation",
           "ParameterType": "global::System.String",
           "ParameterTypeFullName": "System.String"
         },
@@ -162,13 +132,17 @@
           "Name": "loggerPostfix",
           "ParameterType": "global::System.String",
           "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "parameters",
+          "ParameterType": "System.Collections.Generic.Dictionary<global::System.String, global::System.String>"
         }
       ],
       "ReturnType": "void",
       "ReturnTypeFullName": "System.Void"
     },
     {
-      "Name": "SyncEntityErrorLogger",
+      "Name": "ErrorLogger",
       "Parameters": [
         {
           "Name": "function",
@@ -210,7 +184,7 @@
       "ReturnTypeFullName": "System.Void"
     },
     {
-      "Name": "SyncEntityErrorLogger",
+      "Name": "ErrorLogger",
       "Parameters": [
         {
           "Name": "function",
@@ -218,27 +192,7 @@
           "ParameterTypeFullName": "System.String"
         },
         {
-          "Name": "messageGuid",
-          "ParameterType": "global::System.String",
-          "ParameterTypeFullName": "System.String"
-        },
-        {
-          "Name": "source",
-          "ParameterType": "global::System.String",
-          "ParameterTypeFullName": "System.String"
-        },
-        {
-          "Name": "resultDescription",
-          "ParameterType": "global::System.String",
-          "ParameterTypeFullName": "System.String"
-        },
-        {
-          "Name": "resultDrxId",
-          "ParameterType": "global::System.String",
-          "ParameterTypeFullName": "System.String"
-        },
-        {
-          "Name": "result",
+          "Name": "operation",
           "ParameterType": "global::System.String",
           "ParameterTypeFullName": "System.String"
         },
@@ -253,54 +207,20 @@
           "ParameterTypeFullName": "System.String"
         },
         {
-          "Name": "identifierType",
-          "ParameterType": "global::System.String",
-          "ParameterTypeFullName": "System.String"
-        },
-        {
-          "Name": "identifier",
-          "ParameterType": "global::System.String",
-          "ParameterTypeFullName": "System.String"
-        },
-        {
           "Name": "loggerPostfix",
           "ParameterType": "global::System.String",
           "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "parameters",
+          "ParameterType": "System.Collections.Generic.Dictionary<global::System.String, global::System.String>"
         }
       ],
       "ReturnType": "void",
       "ReturnTypeFullName": "System.Void"
     }
   ],
-  "PublicStructures": [
-    {
-      "Name": "SyncResult",
-      "IsPublic": true,
-      "Properties": [
-        {
-          "Name": "MessageGuid",
-          "IsNullable": true,
-          "TypeFullName": "global::System.String"
-        },
-        {
-          "Name": "DrxId",
-          "IsNullable": true,
-          "TypeFullName": "global::System.String"
-        },
-        {
-          "Name": "Result",
-          "IsNullable": true,
-          "TypeFullName": "global::System.String"
-        },
-        {
-          "Name": "Description",
-          "IsNullable": true,
-          "TypeFullName": "global::System.String"
-        }
-      ],
-      "StructureNamespace": "Tanais.StructuredLogging.Structures.Module"
-    }
-  ],
+  "PublicStructures": [],
   "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "ResourceInterfaceNamespace": "Tanais.StructuredLogging",
   "ResourcesKeys": [],
