@@ -29,7 +29,7 @@ namespace Tanais.StructuredLogging.Server
                             string loggerPostfix)
     {
       if (string.IsNullOrEmpty(function))
-        return;
+        function = Constants.Module.Logging.DefaultValuesConstLog.Value;
       if (string.IsNullOrEmpty(message))
         message = Constants.Module.Logging.DefaultValuesConstLog.MessageText;
       if (string.IsNullOrEmpty(stackTrace))
@@ -63,7 +63,7 @@ namespace Tanais.StructuredLogging.Server
                             System.Collections.Generic.Dictionary<string, string> parameters)
     {
       if (string.IsNullOrEmpty(function))
-        return;
+        function = Constants.Module.Logging.DefaultValuesConstLog.Value;
       if (string.IsNullOrEmpty(message))
         message = Constants.Module.Logging.DefaultValuesConstLog.MessageText;
       if (string.IsNullOrEmpty(stackTrace))
@@ -96,7 +96,7 @@ namespace Tanais.StructuredLogging.Server
                             string loggerPostfix)
     {
       if (string.IsNullOrEmpty(function))
-        return;
+        function = Constants.Module.Logging.DefaultValuesConstLog.Value;
       if (string.IsNullOrEmpty(identifierType))
         identifierType = Constants.Module.Logging.DefaultValuesConstLog.Type;
       if (string.IsNullOrEmpty(identifier))
@@ -122,7 +122,7 @@ namespace Tanais.StructuredLogging.Server
                             System.Collections.Generic.Dictionary<string, string> parameters)
     {
       if (string.IsNullOrEmpty(function))
-        return;
+        function = Constants.Module.Logging.DefaultValuesConstLog.Value;
       if (parameters.Count == 0)
         parameters.Add(Constants.Module.Logging.DefaultValuesConstLog.Type, Constants.Module.Logging.DefaultValuesConstLog.Value);
       
