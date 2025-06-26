@@ -1,0 +1,62 @@
+{
+  "$type": "Sungero.Metadata.SolutionMetadata, Sungero.Metadata",
+  "NameGuid": "6b13b90a-9963-4e06-a0b1-b0b8fae73c65",
+  "Name": "ExampleSln",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "Tanais.ExampleSln.Client",
+  "ClientBaseAssemblyName": "Tanais.ExampleSln.ClientBase",
+  "ClientBaseNamespace": "Tanais.ExampleSln.ClientBase",
+  "ClientNamespace": "Tanais.ExampleSln.Client",
+  "Code": "Example",
+  "CompanyCode": "Tanais",
+  "Cover": {
+    "NameGuid": "76bd6ff0-b762-4d1a-b6a4-70c952acd84f",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "3b33733a-1078-4973-b122-d62fb7a3fcca",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "d82915b6-11d1-4416-9694-8e1ad00a2865",
+      "BackgroundPosition": "Stretch"
+    },
+    "RemoteControls": [],
+    "Tabs": []
+  },
+  "DesktopViews": [],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "Tanais.ExampleSln",
+  "IsolatedAssemblyName": "Tanais.ExampleSln.Isolated",
+  "IsolatedNamespace": "Tanais.ExampleSln.Isolated",
+  "IsVisible": false,
+  "OrderedSpecialFolders": [],
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "Tanais.ExampleSln",
+  "ResourcesKeys": [],
+  "ServerAssemblyName": "Tanais.ExampleSln.Server",
+  "ServerNamespace": "Tanais.ExampleSln.Server",
+  "SharedAssemblyName": "Tanais.ExampleSln.Shared",
+  "SharedNamespace": "Tanais.ExampleSln.Shared",
+  "SpecialFolders": [],
+  "Version": "0.0.1.0",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "SolutionMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "ModuleMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

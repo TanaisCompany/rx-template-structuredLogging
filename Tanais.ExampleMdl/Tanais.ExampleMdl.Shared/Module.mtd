@@ -1,0 +1,242 @@
+{
+  "$type": "Sungero.Metadata.ModuleMetadata, Sungero.Metadata",
+  "NameGuid": "a79ee53b-55aa-4526-8bd3-f1b88ec74685",
+  "Name": "ExampleMdl",
+  "AsyncHandlers": [
+    {
+      "NameGuid": "6a16f5b7-edc0-4af6-b3a4-d5de95d6217c",
+      "Name": "CreateOrUpdateJobTitle",
+      "DelayPeriod": 15,
+      "DelayStrategy": "RegularDelayStrategy",
+      "IsHandlerGenerated": true,
+      "Parameters": [
+        {
+          "NameGuid": "26b58a58-0cc8-4e05-81dd-ab14b16cc667",
+          "Name": "JobTitleName",
+          "ParameterType": "String"
+        },
+        {
+          "NameGuid": "5260fa72-c335-4af6-ae17-ae15ec1bfacf",
+          "Name": "JobTitleModel",
+          "ParameterType": "String"
+        }
+      ]
+    }
+  ],
+  "ClientAssemblyName": "Tanais.ExampleMdl.Client",
+  "ClientBaseAssemblyName": "Tanais.ExampleMdl.ClientBase",
+  "ClientBaseNamespace": "Tanais.ExampleMdl.ClientBase",
+  "ClientNamespace": "Tanais.ExampleMdl.Client",
+  "Code": "Exampl1",
+  "CompanyCode": "Tanais",
+  "Cover": {
+    "NameGuid": "300cd055-b3ef-403e-bf3e-abf37d0724f2",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "438b9929-5edd-43ef-a569-382f2fffaefb",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "47c06778-b22b-4322-9e76-71b5bfe97a90",
+      "BackgroundPosition": "Stretch"
+    },
+    "RemoteControls": [],
+    "Tabs": []
+  },
+  "Dependencies": [
+    {
+      "Id": "6b13b90a-9963-4e06-a0b1-b0b8fae73c65",
+      "IsSolutionModule": true,
+      "MaxVersion": "",
+      "MinVersion": ""
+    },
+    {
+      "Id": "4e25caec-c722-4740-bcfd-c4f803840ac6",
+      "MaxVersion": "",
+      "MinVersion": "4.12.43.0"
+    }
+  ],
+  "ExplorerTreeOrder": [
+    {
+      "ItemId": "4526be12-1a6d-44fc-874f-ab87c547f597"
+    },
+    {
+      "ItemId": "17aa1700-d807-416f-8a97-e0016aa4b058",
+      "PreviousItemId": "4526be12-1a6d-44fc-874f-ab87c547f597"
+    }
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "Tanais.ExampleMdl",
+  "IsolatedAssemblyName": "Tanais.ExampleMdl.Isolated",
+  "IsolatedNamespace": "Tanais.ExampleMdl.Isolated",
+  "IsVisible": false,
+  "Jobs": [
+    {
+      "NameGuid": "a5e0adff-f34d-4adb-959b-f5615fa91b18",
+      "Name": "JobSendNotifyAboutDeadlineOfReserveNumber",
+      "GenerateHandler": true,
+      "MonthSchedule": "Monthly",
+      "StartAt": "1753-01-01T08:30:00"
+    }
+  ],
+  "Libraries": [
+    {
+      "NameGuid": "3f973974-6ab0-4e5f-a8c2-d0e201b15564",
+      "Name": "NewtonsoftJson",
+      "Scope": "Both"
+    }
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "GetJobTitle",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "jobTitleExternalId",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::Sungero.Company.IJobTitle",
+      "ReturnTypeFullName": "Sungero.Company.IJobTitle, Sungero.Domain.Interfaces"
+    },
+    {
+      "Name": "GetJsonByObject",
+      "Parameters": [
+        {
+          "Name": "objectValue",
+          "ParameterType": "System.Object"
+        }
+      ],
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
+    },
+    {
+      "Name": "ReleasingReservedNumber",
+      "Parameters": [
+        {
+          "Name": "documents",
+          "ParameterType": "global::System.Linq.IQueryable<global::Sungero.RecordManagement.IOrderBase>",
+          "ParameterTypeFullName": "System.Linq.IQueryable"
+        },
+        {
+          "Name": "releasingReservedNumberDate",
+          "ParameterType": "global::System.DateTime",
+          "ParameterTypeFullName": "System.DateTime"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "SendNotifyAboutDeadlineReservedNumber",
+      "Parameters": [
+        {
+          "Name": "documents",
+          "ParameterType": "global::System.Linq.IQueryable<global::Sungero.RecordManagement.IOrderBase>",
+          "ParameterTypeFullName": "System.Linq.IQueryable"
+        },
+        {
+          "Name": "aboutDeadlineReservedNumberDate",
+          "ParameterType": "global::System.DateTime",
+          "ParameterTypeFullName": "System.DateTime"
+        },
+        {
+          "Name": "daysToComplete",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        }
+      ],
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "SyncJobTitle",
+      "Parameters": [
+        {
+          "Name": "GUID",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "Name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "DepartmentId",
+          "ParameterType": "global::System.Nullable<global::System.Int64>",
+          "ParameterTypeFullName": "System.Nullable"
+        },
+        {
+          "Name": "Status",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String",
+      "WebApiRequestType": "Post"
+    }
+  ],
+  "PublicStructures": [
+    {
+      "Name": "JobTitle",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "GUID",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Name",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "DepartmentId",
+          "IsNullable": true,
+          "TypeFullName": "global::System.Nullable<global::System.Int64>"
+        },
+        {
+          "Name": "Status",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "Tanais.ExampleMdl.Structures.Module"
+    }
+  ],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "Tanais.ExampleMdl",
+  "ResourcesKeys": [
+    "JobTitle_GuidIsEmptyErrorLog",
+    "GuidIsEmpty",
+    "SubjectTaskAboutDeadlineReservedNumber",
+    "CleanReservedNumber",
+    "DepartmentNotFound"
+  ],
+  "ServerAssemblyName": "Tanais.ExampleMdl.Server",
+  "ServerNamespace": "Tanais.ExampleMdl.Server",
+  "SharedAssemblyName": "Tanais.ExampleMdl.Shared",
+  "SharedNamespace": "Tanais.ExampleMdl.Shared",
+  "SpecialFolders": [],
+  "Version": "0.0.1.0",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "ModuleMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}
