@@ -58,15 +58,6 @@
       "MinVersion": "4.12.43.0"
     }
   ],
-  "ExplorerTreeOrder": [
-    {
-      "ItemId": "4526be12-1a6d-44fc-874f-ab87c547f597"
-    },
-    {
-      "ItemId": "17aa1700-d807-416f-8a97-e0016aa4b058",
-      "PreviousItemId": "4526be12-1a6d-44fc-874f-ab87c547f597"
-    }
-  ],
   "IconResourcesKeys": [],
   "Importance": "Medium",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",

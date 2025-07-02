@@ -22,7 +22,7 @@ namespace Tanais.ExampleMdl.Server
       // Добавляем отладочное сообщение в лог со следующими параметрами:
       // наименование ф-ции, наименование операции, название идентификатора, идентификатор сущности и постфикс логгера;
       // наименование ф-ции - CreateOrUpdateJobTitle; параметр "функция" одинаков в рамках текущей функции;
-      // наименование операции - Start: операция старта синхронизации сущности;
+      // наименование операции - Start: операция старта АО "Синхронизация должности из внешней системы";
       // название идентификатора - константа с текстом "JobTitle"; одинаков в рамках текущей задачи;
       // идентификатор сущности - наименование сущности в системе; одинаков в рамках текущего примера;
       // постфикс логгера - константа с текстом "Integration"; одинаков в рамках текущей задачи.
@@ -59,64 +59,37 @@ namespace Tanais.ExampleMdl.Server
         // Десериализовать структуру.
         jobTitleModel = JsonConvert.DeserializeObject<Structures.Module.JobTitle>(args.JobTitleModel);
         
-        // Получить должность.
+        // Получить должность по GUID, если такой не найдено - создать новую.
         jobTitle = Functions.Module.GetJobTitle(jobTitleModel.GUID);
-        if (jobTitle == null)
-        {
-          // Пример вызова перегрузки метода ErrorLogger:
-          // var parameters = new Dictionary<string, string>() { {Constants.Module.IdentifierTypesConstLog.JobTitle, args.JobTitleName} };
-          // StructuredLogging.PublicFunctions.Module.ErrorLogger(Constants.Module.FunctionsConstLog.CreateOrUpdateJobTitle,
-          //                                                      Constants.Module.OperationsConstLog.GetJobTitle,
-          //                                                      Constants.Module.MessagesConstLogs.EntityNotFound,
-          //                                                      string.Empty,
-          //                                                      Constants.Module.LoggerPostfixesConstLog.Integration,
-          //                                                      parameters);
-          
-          // Добавляем в лог сообщение об ошибке со следующими параметрами:
-          // наименование ф-ции, наименование операции, сообщение об ошибке, трассировка стека, название индентификатора, идентификатор сущности и постфикс логгера;
-          // наименование ф-ции - CreateOrUpdateJobTitle; параметр "функция" одинаков в рамках текущей функции;
-          // наименование операции - GetJobTitle: операция получения должности;
-          // сообщение об ошибке - константа с текстом "Entity not found";
-          // трассировка стека - string.Empty;
-          // название идентификатора - константа с текстом "JobTitle"; одинаков в рамках текущей задачи;
-          // идентификатор сущности - наименование сущности в системе; одинаков в рамках текущего примера;
-          // постфикс логгера - константа с текстом "Integration"; одинаков в рамках текущей задачи.
-          StructuredLogging.PublicFunctions.Module.ErrorLogger(Constants.Module.FunctionsConstLog.CreateOrUpdateJobTitle,
-                                                               Constants.Module.OperationsConstLog.GetJobTitle,
-                                                               Constants.Module.MessagesConstLogs.EntityNotFound,
-                                                               string.Empty,
-                                                               Constants.Module.IdentifierTypesConstLog.JobTitle,
-                                                               args.JobTitleName,
-                                                               Constants.Module.LoggerPostfixesConstLog.Integration);
-
-          args.Retry = true;
-          return;
-        }
         
         // Проверка блокировки.
-        if (Locks.GetLockInfo(jobTitle).IsLocked)
+        var lockInfo = Locks.GetLockInfo(jobTitle);
+        if (lockInfo.IsLocked)
         {
-          // Добавляем в лог сообщение об ошибке со следующими параметрами:
-          // наименование ф-ции, наименование операции, сообщение об ошибке, трассировка стека, название индентификатора, идентификатор сущности и постфикс логгера;
+          // Добавляем отладочное сообщение в лог со следующими параметрами:
+          // наименование ф-ции, наименование операции, название идентификатора, идентификатор сущности и постфикс логгера;
           // наименование ф-ции - CreateOrUpdateJobTitle; параметр "функция" одинаков в рамках текущей функции;
-          // наименование операции - GetLockInfo: операция получения информации о блокировке сущности;
-          // сообщение об ошибке - сообщение о блокировке: Locks.GetLockInfo(jobTitle).LockedMessage;
-          // трассировка стека - string.Empty;
-          // название идентификатора - константа с текстом "JobTitle"; одинаков в рамках текущей задачи;
-          // идентификатор сущности - наименование сущности в системе; одинаков в рамках текущего примера;
-          // постфикс логгера - константа с текстом "Integration"; одинаков в рамках текущей задачи.
-          StructuredLogging.PublicFunctions.Module.ErrorLogger(Constants.Module.FunctionsConstLog.CreateOrUpdateJobTitle,
+          // наименование операции - GetLockInfo: получение информациии о блокировке сущности;
+          // постфикс логгера - константа с текстом "Integration"; одинаков в рамках текущей задачи;
+          // словарь, содержащий информацию об идентификаторе сущности и информационное сообщение:
+          //    1) идентификатор:
+          //       название идентификатора - константа с текстом "JobTitle"; одинаков в рамках текущей задачи;
+          //       идентификатор сущности - наименование сущности в системе; одинаков в рамках текущего примера;
+          //    2) сообщение:
+          //       ключ - константа с текстом "Message";
+          //       значение - сообщение о блокировке.
+          StructuredLogging.PublicFunctions.Module.DebugLogger(Constants.Module.FunctionsConstLog.CreateOrUpdateJobTitle,
                                                                Constants.Module.OperationsConstLog.GetLockInfo,
-                                                               Locks.GetLockInfo(jobTitle).LockedMessage,
-                                                               string.Empty,
-                                                               Constants.Module.IdentifierTypesConstLog.JobTitle,
-                                                               args.JobTitleName,
-                                                               Constants.Module.LoggerPostfixesConstLog.Integration);
+                                                               Constants.Module.LoggerPostfixesConstLog.Integration,
+                                                               new Dictionary<string, string>()
+                                                               {
+                                                                 { Constants.Module.IdentifierTypesConstLog.JobTitle, args.JobTitleName },
+                                                                 { Constants.Module.MessagesConstLogs.Message, lockInfo.LockedMessage }
+                                                               });
 
           args.Retry = true;
           return;
         }
-        
         Locks.Lock(jobTitle);
         
         // Заполнить свойства должности.
@@ -142,6 +115,7 @@ namespace Tanais.ExampleMdl.Server
         }
         
       }
+      // Обработка исключений, которые происходят во время валидации данных (переповтор не требуется).
       catch (Sungero.Domain.Shared.Validation.ValidationException ex)
       {
         // Добавляем в лог сообщение об ошибке со следующими параметрами:
@@ -163,6 +137,8 @@ namespace Tanais.ExampleMdl.Server
         
         args.Retry = false;
       }
+      // Обработка исключений из прикладного кода.
+      // Пример: если не удалось получить сущность по ExternalId (переповтор не требуется).
       catch (Sungero.Core.AppliedCodeException ex)
       {
         // Добавляем в лог сообщение об ошибке со следующими параметрами:
@@ -184,6 +160,7 @@ namespace Tanais.ExampleMdl.Server
         
         args.Retry = false;
       }
+      // Обработка непредвиденных ошибок, возникающих во время выполнения приложения (требуется переповтор).
       catch (Exception ex)
       {
         // Добавляем в лог сообщение об ошибке со следующими параметрами:
@@ -208,14 +185,14 @@ namespace Tanais.ExampleMdl.Server
       }
       finally
       {
-        if (jobTitle != null && Locks.GetLockInfo(jobTitle).IsLocked)
+        if (jobTitle != null)
           Locks.Unlock(jobTitle);
       }
       
       // Добавляем отладочное сообщение в лог со следующими параметрами:
       // наименование ф-ции, наименование операции, название идентификатора, идентификатор сущности и постфикс логгера;
       // наименование ф-ции - CreateOrUpdateJobTitle; параметр "функция" одинаков в рамках текущей функции;
-      // наименование операции - Completion: операция завершения синхронизации сущности;
+      // наименование операции - Completion: операция завершения АО "Синхронизация должности из внешней системы";
       // название идентификатора - константа с текстом "JobTitle"; одинаков в рамках текущей задачи;
       // идентификатор сущности - наименование сущности в системе; одинаков в рамках текущего примера;
       // постфикс логгера - константа с текстом "Integration"; одинаков в рамках текущей задачи.

@@ -84,9 +84,6 @@ namespace Tanais.ExampleMdl.Constants
       // Проверка документа.
       public const string CheckDocument = "CheckDocument";
       
-      // Выдать права.
-      public const string Grant = "Grant";
-      
       // Освобождение резервного номера.
       public const string CleanReservedNumber = "CleanReservedNumber";
       
@@ -111,7 +108,7 @@ namespace Tanais.ExampleMdl.Constants
       // Получение должности.
       public const string GetJobTitle = "GetJobTitle";
       
-      // Получение информации о блокировке сущности.
+      // Получить информацию о блокировке сущности.
       public const string GetLockInfo = "GetLockInfo";
       
       // Сохранение сущности.
@@ -130,15 +127,6 @@ namespace Tanais.ExampleMdl.Constants
     [Public]
     public static class IdentifierTypesConstLog
     {
-      // Документ.
-      public const string Document = "Document";
-      
-      // Контролер.
-      public const string Supervisor = "Supervisor";
-      
-      // Задача.
-      public const string ExampleTask = "ExampleTask";
-      
       // Приказ/распоряжение.
       public const string OrderBase = "OrderBase";
       
@@ -155,9 +143,6 @@ namespace Tanais.ExampleMdl.Constants
     [Public]
     public static class LoggerPostfixesConstLog
     {
-      // Задача.
-      public const string ExampleMdlTask = "ExampleMdlTask";
-      
       // ФП.
       public const string DocflowJob = "DocflowJob";
       

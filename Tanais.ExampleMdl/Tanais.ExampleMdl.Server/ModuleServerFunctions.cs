@@ -297,19 +297,6 @@ namespace Tanais.ExampleMdl.Server
     [Remote]
     public void CreateOrUpdateJobTitle(string JobTitleModel, string JobTitleName)
     {
-      // Добавляем отладочное сообщение в лог со следующими параметрами:
-      // наименование ф-ции, наименование операции, название идентификатора, идентификатор сущности и постфикс логгера;
-      // наименование ф-ции - CreateOrUpdateJobTitle; параметр "функция" одинаков в рамках текущей функции;
-      // наименование операции - Create: операция создания структуры createOrUpdateJobTiltle;
-      // название идентификатора - константа с текстом "JobTitle"; одинаков в рамках текущей задачи;
-      // идентификатор сущности - наименование сущности в системе; одинаков в рамках текущего примера;
-      // постфикс логгера - константа с текстом "Integration"; одинаков в рамках текущей задачи.
-      StructuredLogging.PublicFunctions.Module.DebugLogger(Constants.Module.FunctionsConstLog.CreateOrUpdateJobTitle,
-                                                           Constants.Module.OperationsConstLog.Create,
-                                                           Constants.Module.IdentifierTypesConstLog.JobTitle,
-                                                           JobTitleName,
-                                                           Constants.Module.LoggerPostfixesConstLog.Integration);
-      
       var createOrUpdateJobTiltle = Tanais.ExampleMdl.AsyncHandlers.CreateOrUpdateJobTitle.Create();
       createOrUpdateJobTiltle.JobTitleModel = JobTitleModel;
       createOrUpdateJobTiltle.JobTitleName = JobTitleName;
