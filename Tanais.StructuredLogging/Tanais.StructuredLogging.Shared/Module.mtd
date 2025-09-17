@@ -33,7 +33,6 @@
       "MinVersion": ""
     }
   ],
-  "IconResourcesKeys": [],
   "Importance": "Medium",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "Tanais.StructuredLogging",
@@ -223,7 +222,6 @@
   "PublicStructures": [],
   "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "ResourceInterfaceNamespace": "Tanais.StructuredLogging",
-  "ResourcesKeys": [],
   "ServerAssemblyName": "Tanais.StructuredLogging.Server",
   "ServerNamespace": "Tanais.StructuredLogging.Server",
   "SharedAssemblyName": "Tanais.StructuredLogging.Shared",
@@ -234,7 +232,7 @@
   "Versions": [
     {
       "Type": "ModuleMetadata",
-      "Number": 9
+      "Number": 11
     },
     {
       "Type": "DomainApi",

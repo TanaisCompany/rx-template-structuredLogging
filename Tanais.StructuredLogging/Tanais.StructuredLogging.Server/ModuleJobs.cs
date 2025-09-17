@@ -6,7 +6,7 @@ using Sungero.CoreEntities;
 
 namespace Tanais.StructuredLogging.Server
 {
-  public class ModuleJobs
+  public partial class ModuleJobs
   {
 
   }
