@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace Tanais.ExampleMdl.Server
 {
-  public class ModuleAsyncHandlers
+  public partial class ModuleAsyncHandlers
   {
 
     public virtual void CreateOrUpdateJobTitle(Tanais.ExampleMdl.Server.AsyncHandlerInvokeArgs.CreateOrUpdateJobTitleInvokeArgs args)

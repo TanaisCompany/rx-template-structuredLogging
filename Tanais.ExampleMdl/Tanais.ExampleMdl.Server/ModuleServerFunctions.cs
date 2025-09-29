@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace Tanais.ExampleMdl.Server
 {
-  public class ModuleFunctions
+  public partial class ModuleFunctions
   {
 
     #region ФП "Рассылка уведомлений о завершении срока действия зарезервированных номеров для распорядительных документов"

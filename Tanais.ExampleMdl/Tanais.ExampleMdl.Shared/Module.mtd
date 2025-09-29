@@ -58,7 +58,6 @@
       "MinVersion": "4.12.43.0"
     }
   ],
-  "IconResourcesKeys": [],
   "Importance": "Medium",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "Tanais.ExampleMdl",
@@ -223,7 +222,7 @@
   "Versions": [
     {
       "Type": "ModuleMetadata",
-      "Number": 9
+      "Number": 11
     },
     {
       "Type": "DomainApi",

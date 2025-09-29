@@ -6,7 +6,7 @@ using Sungero.CoreEntities;
 
 namespace Tanais.ExampleSln.Client
 {
-  public class ModuleFunctions
+  public partial class ModuleFunctions
   {
 
   }

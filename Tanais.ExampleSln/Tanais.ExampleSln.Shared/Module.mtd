@@ -26,7 +26,6 @@
     "Tabs": []
   },
   "DesktopViews": [],
-  "IconResourcesKeys": [],
   "Importance": "Medium",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "Tanais.ExampleSln",
@@ -37,7 +36,6 @@
   "PublicStructures": [],
   "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "ResourceInterfaceNamespace": "Tanais.ExampleSln",
-  "ResourcesKeys": [],
   "ServerAssemblyName": "Tanais.ExampleSln.Server",
   "ServerNamespace": "Tanais.ExampleSln.Server",
   "SharedAssemblyName": "Tanais.ExampleSln.Shared",
@@ -48,11 +46,11 @@
   "Versions": [
     {
       "Type": "SolutionMetadata",
-      "Number": 9
+      "Number": 11
     },
     {
       "Type": "ModuleMetadata",
-      "Number": 9
+      "Number": 11
     },
     {
       "Type": "DomainApi",
